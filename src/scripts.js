@@ -44,27 +44,27 @@ async function checkWeather(city = "London") {
         weatherIcon.className =  "w-24 h-20 object-contain";
 
         if (weatherCondition === "Clouds") {
-            weatherIcon.src = "/assets/images/Group 34.svg";
+            weatherIcon.src = "./assets/images/Group 34.svg";
         }
 
         else if (weatherCondition === "Clear") {
-            weatherIcon.src = "/assets/images/clear.png";
+            weatherIcon.src = "./assets/images/clear.png";
         }
 
         else if (weatherCondition === "Rain") {
-            weatherIcon.src = "/assets/images/rain.png";
+            weatherIcon.src = "./assets/images/rain.png";
         }
 
         else if (weatherCondition === "Drizzle") {
-            weatherIcon.src = "/assets/images/drizzle.png";
+            weatherIcon.src = "./assets/images/drizzle.png";
         }
 
         else if (weatherCondition === "Mist") {
-            weatherIcon.src = "/assets/images/mist.png";
+            weatherIcon.src = "./assets/images/mist.png";
         }
 
         else {
-            weatherIcon.src = "/assets/images/Group 34.svg";
+            weatherIcon.src = "./assets/images/Group 34.svg";
         }
 
     }
@@ -144,38 +144,38 @@ async function getForecast(city = "London", type = "today") {
 
             if (condition === "Clouds") {
 
-                icon.src = "/assets/images/Group 34.svg";
+                icon.src = "./assets/images/Group 34.svg";
 
             }
 
             else if (condition === "Clear") {
 
-                icon.src = "/assets/images/clear.png";
+                icon.src = "./assets/images/clear.png";
 
             }
 
             else if (condition === "Rain") {
 
-                icon.src = "/assets/images/rain.png";
+                icon.src = "./assets/images/rain.png";
 
             }
 
             else if (condition === "Drizzle") {
 
-                icon.src = "/assets/images/drizzle.png";
+                icon.src = "./assets/images/drizzle.png";
 
             }
 
             else if (condition === "Mist") {
 
-                icon.src = "/assets/images/mist.png";
+                icon.src = "./assets/images/mist.png";
 
             }
 
             else {
 
                 icon.src =
-                    "/assets/images/cloud-angled-rain-zap.svg";
+                    "./assets/images/cloud-angled-rain-zap.svg";
 
             }
 
