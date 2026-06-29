@@ -1,16 +1,17 @@
 {
   "name": "weather-app",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0",
-    "tailwindcss": "^4.3.0"
+    "chart.js": "^4.5.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
   }
 }
