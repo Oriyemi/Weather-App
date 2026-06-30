@@ -37,17 +37,17 @@ async function checkWeather(city = "London") {
     weatherIcon.className = "w-24 h-20 object-contain";
 
     if (weatherCondition === "Clouds") {
-      weatherIcon.src = "./assets/images/Group 34.svg";
+      weatherIcon.src = "/images/Group 34.svg";
     } else if (weatherCondition === "Clear") {
-      weatherIcon.src = "./assets/images/clear.png";
+      weatherIcon.src = "/images/clear.png";
     } else if (weatherCondition === "Rain") {
-      weatherIcon.src = "./assets/images/rain.png";
+      weatherIcon.src = "/images/rain.png";
     } else if (weatherCondition === "Drizzle") {
-      weatherIcon.src = "./assets/images/drizzle.png";
+      weatherIcon.src = "/images/drizzle.png";
     } else if (weatherCondition === "Mist") {
-      weatherIcon.src = "./assets/images/mist.png";
+      weatherIcon.src = "/images/mist.png";
     } else {
-      weatherIcon.src = "./assets/images/Group 34.svg";
+      weatherIcon.src = "s/images/Group 34.svg";
     }
   } catch (error) {
     alert(error.message);
@@ -96,17 +96,17 @@ async function getForecast(city = "London", type = "today") {
       const condition = item.weather[0].main;
 
       if (condition === "Clouds") {
-        icon.src = "./assets/images/Group 34.svg";
+        icon.src = "/images/Group 34.svg";
       } else if (condition === "Clear") {
-        icon.src = "./assets/images/clear.png";
+        icon.src = "/images/clear.png";
       } else if (condition === "Rain") {
-        icon.src = "./assets/images/rain.png";
+        icon.src = "/images/rain.png";
       } else if (condition === "Drizzle") {
-        icon.src = "./assets/images/drizzle.png";
+        icon.src = "/images/drizzle.png";
       } else if (condition === "Mist") {
-        icon.src = "./assets/images/mist.png";
+        icon.src = "/images/mist.png";
       } else {
-        icon.src = "./assets/images/cloud-angled-rain-zap.svg";
+        icon.src = "/images/cloud-angled-rain-zap.svg";
       }
 
       icon.className = "weather-icon w-10 h-10 object-contain my-2";
