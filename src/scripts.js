@@ -96,17 +96,17 @@ async function getForecast(city = "London", type = "today") {
             const condition = item.weather[0].main;
 
             if (condition === "Clouds") {
-                icon.src = "/images/Group 34.svg";
+                icon.src = "/assets/images/Group 34.svg";
             } else if (condition === "Clear") {
-                icon.src = "/images/clear.png";
+                icon.src = "/assets/images/clear.png";
             } else if (condition === "Rain") {
-                icon.src = "/images/rain.png";
+                icon.src = "/assets/images/rain.png";
             } else if (condition === "Drizzle") {
-                icon.src = "/images/drizzle.png";
+                icon.src = "/assets/images/drizzle.png";
             } else if (condition === "Mist") {
-                icon.src = "/images/mist.png";
+                icon.src = "/assets/images/mist.png";
             } else {
-                icon.src = "/images/cloud-angled-rain-zap.svg";
+                icon.src = "/assets/images/cloud-angled-rain-zap.svg";
             }
 
             icon.className = "weather-icon w-10 h-10 object-contain my-2";
