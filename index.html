@@ -8,14 +8,13 @@
       :root {
         --bg-main: #ffffffff;
         --bg-card: #bdb9b9;
-        --bg-secondary: #f4f4f5; 
+        --bg-secondary: #f4f4f5;
         --bg-view: #e4e4e7;
         --text-heading: #000000;
         --text-sub: #52525b;
       }
 
       body.dark-theme {
-       
         --bg-main: #000000;
         --bg-card: #000000;
         --bg-secondary: #18181b;
@@ -24,7 +23,6 @@
         --text-sub: #a1a1aa;
       }
 
-   
       .dynamic-bg {
         background-color: var(--bg-main);
       }
@@ -42,69 +40,93 @@
       }
 
       body.dark-theme .weather-icon {
-         filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
         transition: filter 0.3s ease;
       }
-      
-     
-      *, *::before, *::after {
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
 
+      *,
+      *::before,
+      *::after {
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
     </style>
   </head>
   <body class="dynamic-bg dynamic-text min-h-screen">
     <div id="weather-app" class="p-4 min-h-screen">
-      
-      <div id="header-section" class="flex flex-col md:flex-row justify-between gap-4 items-cente">
+      <div
+        id="header-section"
+        class="flex flex-col md:flex-row justify-between gap-4 items-cente"
+      >
         <div class="flex flex-col items-start text-left w-full">
           <h1 class="font-light dynamic-sub-text">Welcome Home,</h1>
           <p class="user-name font-bold dynamic-text">Faith Esan</p>
         </div>
-        <div class="flex items-center gap-2 dynamic-secondary rounded-xl px-4 py-3 w-full lg:w-137.5 xl:w-162.5">
-         <input  type="text"  id="city-input"  placeholder="Search city..."  class="bg-transparent outline-none px-2 py-1 text-sm w-full dynamic-text"/>
-         <button id="search-btn" class="cursor-pointer p-1">
-           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="dynamic-text">
-           <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-         </button>
-         <button
-           id="theme-switch"
-           class="p-2.5 rounded-xl dynamic-secondary cursor-pointer"
-           aria-label="Toggle Theme"
-         >
-           <svg
-             id="sun-icon"
-             class="block dark:hidden"
-             width="20"
-             height="20"
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <circle cx="12" cy="12" r="4"></circle>
-             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-           </svg>
- 
-           <svg
-             id="moon-icon"
-             class="hidden dark:block"
-             width="20"
-             height="20"
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-           </svg>
-         </button>
-       </div>
+        <div
+          class="flex items-stretch  gap-4 sm:gap-6 w-full "
+        >
+          <div
+            class="flex items-center gap-3 dynamic-secondary rounded-xl  px-5 py-4 grow shadow-sm "
+          >
+            <input type="text" id="city-input" placeholder="Search city..."class="bg-transparent outline-none px-2 text-base sm:text-lg w-full dynamic-text placeholder-zinc-4xl"/>
+            <button
+              id="search-btn"
+              class="cursor-pointer p-1 hover:scale-105 transition-transform shrink-0"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="dynamic-text"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+
+          <button
+            id="theme-switch"
+            class="mt-auto w-14 h-14 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-zinc-200 dark:border-zinc-700 rounded-2xl flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all duration-300"
+          >
+            <svg
+              id="sun-icon"
+              class="block dark:hidden"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              ></path>
+            </svg>
+
+            <svg
+              id="moon-icon"
+              class="hidden dark:block"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div
@@ -113,8 +135,14 @@
       >
         <div>
           <h1 id="current-date" class="text-sm dynamic-sub-text"></h1>
-          <p id="current-weather-condition" class="text-lg font-bold dynamic-text"></p>
-          <p id="current-temperature" class="text-4xl font-bold mt-2 dynamic-text"></p>
+          <p
+            id="current-weather-condition"
+            class="text-lg font-bold dynamic-text"
+          ></p>
+          <p
+            id="current-temperature"
+            class="text-4xl font-bold mt-2 dynamic-text"
+          ></p>
         </div>
         <div class="weatherIcon">
           <img src="./assets/images/Group 34.svg" alt="cloud" />
@@ -126,65 +154,125 @@
         class="dynamic-secondary rounded-4xl flex justify-between p-14 mt-6"
       >
         <div class="wind flex flex-col items-center text-center">
-          <img src="./assets/images/fast-wind.svg" alt="wind" class="weather-icon mx-auto dynamic-text" />
+          <img
+            src="./assets/images/fast-wind.svg"
+            alt="wind"
+            class="weather-icon mx-auto dynamic-text"
+          />
           <p class="metric-value pt-2 font-bold dynamic-text"></p>
           <p class="metric-label pt-1 text-sm dynamic-text">Wind</p>
         </div>
         <div class="humidity flex flex-col items-center text-center">
-          <img src="./assets/images/humidity.svg" alt="humidity" class="weather-icon mx-auto" />
+          <img
+            src="./assets/images/humidity.svg"
+            alt="humidity"
+            class="weather-icon mx-auto"
+          />
           <p class="metric-value pt-2 font-bold dynamic-text"></p>
           <p class="metric-label pt-1 text-sm dynamic-text">Humidity</p>
         </div>
         <div class="rain flex flex-col items-center text-center">
-          <img src="./assets/images/sun-cloud-hailstone-01.svg" alt="rain" class="weather-icon mx-auto" />
+          <img
+            src="./assets/images/sun-cloud-hailstone-01.svg"
+            alt="rain"
+            class="weather-icon mx-auto"
+          />
           <p class="metric-value pt-2 font-bold dynamic-text"></p>
           <p class="metric-label pt-1 text-sm dynamic-text">Rain</p>
         </div>
       </div>
 
-      <ul class="nav-tab flex gap-8 mt-20 mb-10 list-none font-bold dynamic-text">
-  <li id="today-tab" class="cursor-pointer underline">Today</li>
-  <li id="tomorrow-tab" class="cursor-pointer opacity-60 hover:opacity-100">
-    Tomorrow
-  </li>
-  <li id="next3days-tab" class="cursor-pointer opacity-60 hover:opacity-100">
-    Next 3 Days
-  </li>
-</ul>
+      <ul
+        class="nav-tab flex lg:flex-col gap-8 mt-20 mb-10 list-none font-bold dynamic-text"
+      >
+        <li id="today-tab" class="cursor-pointer underline">Today</li>
+        <li
+          id="tomorrow-tab"
+          class="cursor-pointer opacity-60 hover:opacity-100"
+        >
+          Tomorrow
+        </li>
+        <li
+          id="next3days-tab"
+          class="cursor-pointer opacity-60 hover:opacity-100"
+        >
+          Next 3 Days
+        </li>
+      </ul>
 
-      <div  id="forecast-container" class="Forecast-slider flex justify-between gap-2.5 mt-4 w-full">
-        
-        <div class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5">
-          <p class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"></p>
-          <img src="./assets/images/sun-cloud-hailstone-01.svg" alt="cloud" class="weather-icon w-6 h-6 object-contain my-2 " />
-          <p class="temperature-display font-semibold text-sm tracking-tight dynamic-text"></p>
+      <div
+        id="forecast-container"
+        class="Forecast-slider flex justify-between gap-2.5 mt-4 w-full"
+      >
+        <div
+          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5"
+        >
+          <p
+            class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
+          ></p>
+          <img
+            src="./assets/images/sun-cloud-hailstone-01.svg"
+            alt="cloud"
+            class="weather-icon w-6 h-6 object-contain my-2"
+          />
+          <p
+            class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
+          ></p>
         </div>
 
-        <div class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5">
-          <p class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"></p>
-          <img src="./assets/images/fast-wind.svg" alt="wind" class="weather-icon w-6 h-6 object-contain my-2" />
-          <p class="temperature-display font-semibold text-sm tracking-tight dynamic-text"></p>
+        <div
+          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5"
+        >
+          <p
+            class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
+          ></p>
+          <img
+            src="./assets/images/fast-wind.svg"
+            alt="wind"
+            class="weather-icon w-6 h-6 object-contain my-2"
+          />
+          <p
+            class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
+          ></p>
         </div>
 
-        <div class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5">
-          <p class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"></p>
-          <img src="./assets/images/cloud-angled-zap.svg" alt="cloud-zap" class="weather-icon w-6 h-6 object-contain my-2" />
-          <p class="temperature-display font-semibold text-sm tracking-tight dynamic-text"></p>
+        <div
+          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5"
+        >
+          <p
+            class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
+          ></p>
+          <img
+            src="./assets/images/cloud-angled-zap.svg"
+            alt="cloud-zap"
+            class="weather-icon w-6 h-6 object-contain my-2"
+          />
+          <p
+            class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
+          ></p>
         </div>
 
-        <div class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5">
-          <p class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"></p>
-          <img src="./assets/images/cloud-angled-rain-zap.svg" alt="cloud-rain" class="weather-icon w-6 h-6 object-contain my-2" />
-          <p class="temperature-display font-semibold text-sm tracking-tight dynamic-text"></p>
+        <div
+          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5"
+        >
+          <p
+            class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
+          ></p>
+          <img
+            src="./assets/images/cloud-angled-rain-zap.svg"
+            alt="cloud-rain"
+            class="weather-icon w-6 h-6 object-contain my-2"
+          />
+          <p
+            class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
+          ></p>
         </div>
-
-        
       </div>
       <div class="mt-8 relative w-full h-44">
-       <canvas id="weatherGraph"></canvas>
+        <canvas id="weatherGraph"></canvas>
       </div>
     </div>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <script type="module" src="./src/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./src/scripts.js"></script>
   </body>
 </html>
