@@ -171,7 +171,7 @@ function updateWeatherGraph(forecastData, type) {
 
     const textColor = isDark ? "#a1a1aa" : "#52525b";
 
-    const lineColor = "#3b82f6";
+    const lineColor = "#fcd34d";
 
     weatherChartInstance = new Chart(ctx, {
         type: "line",
