@@ -165,7 +165,6 @@ function updateWeatherGraph(forecastData, type) {
     if (weatherChartInstance) {
         weatherChartInstance.destroy();
     }
-
     const isDark =
         document.body.classList.contains("dark-theme");
 
