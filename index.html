@@ -7,9 +7,9 @@
     <style>
       :root {
         --bg-main: #ffffffff;
-        --bg-card: #bdb9b9;
+        --bg-card: #373633;
         --bg-secondary: #f4f4f5;
-        --bg-view: #e4e4e7;
+        --bg-view: #0f0f29;
         --text-heading: #000000;
         --text-sub: #52525b;
       }
@@ -39,11 +39,7 @@
         color: var(--text-sub);
       }
 
-      body.dark-theme .weather-icon {
-        filter: brightness(0) invert(1);
-        transition: filter 0.3s ease;
-      }
-
+      
       *,
       *::before,
       *::after {
@@ -145,7 +141,7 @@
           ></p>
         </div>
         <div class="weatherIcon">
-         <img src="/assets/images/Group 34.svg" alt="cloud" />
+         <img src="/assets/images/Group 34.svg" alt="cloud" class="w-24 h-24 object-contain" />
         </div>
       </div>
 
@@ -157,7 +153,7 @@
           <img
             src="/assets/images/fast-wind.svg"
             alt="wind"
-            class="weather-icon mx-auto dynamic-text"
+            class="weather-icon mx-auto "
           />
           <p class="metric-value pt-2 font-bold dynamic-text"></p>
           <p class="metric-label pt-1 text-sm dynamic-text">Wind</p>
@@ -202,10 +198,10 @@
 
       <div
         id="forecast-container"
-        class="Forecast-slider flex justify-between gap-2.5 mt-4 w-full"
+        class="Forecast-slider flex justify-between gap-2 mt-4 w-full"
       >
         <div
-          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 min-h-27.5"
+          class="forecast-card flex flex-col items-center justify-between dynamic-secondary rounded-[22px] py-4 w-[22%] aspect-3/5 h-30 md:min-h-27"
         >
           <p
             class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
@@ -213,7 +209,7 @@
           <img
             src="/assets/images/sun-cloud-hailstone-01.svg"
             alt="cloud"
-            class="weather-icon w-6 h-6 object-contain my-2"
+           class="weather-icon w-10 h-10 object-contain my-2"
           />
           <p
             class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
@@ -229,7 +225,7 @@
           <img
             src="/assets/images/fast-wind.svg"
             alt="wind"
-            class="weather-icon w-6 h-6 object-contain my-2"
+            class="weather-icon w-10 h-10 object-contain my-2"
           />
           <p
             class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
@@ -243,9 +239,9 @@
             class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
           ></p>
           <img
-            src="/assets/images/cloud-angled-zap.svg"
-            alt="cloud-zap"
-            class="weather-icon w-6 h-6 object-contain my-2"
+            src="/assets/images/sun-cloud-hailstone-01.svg"
+            alt="cloud"
+            class="weather-icon w-10 h-10 object-contain my-2"
           />
           <p
             class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
@@ -258,10 +254,10 @@
           <p
             class="hourly-forecast text-[11px] dynamic-text font-medium tracking-tight"
           ></p>
-          <img
-            src="/assets/images/cloud-angled-rain-zap.svg"
-            alt="cloud-rain"
-            class="weather-icon w-6 h-6 object-contain my-2"
+           <img
+            src="/assets/images/sun-cloud-hailstone-01.svg"
+            alt="cloud"
+            class="weather-icon w-10 h-10 object-contain my-2"
           />
           <p
             class="temperature-display font-semibold text-sm tracking-tight dynamic-text"
