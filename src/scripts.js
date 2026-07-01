@@ -8,7 +8,7 @@ const todayTab = document.querySelector("#today-tab");
 const tomorrowTab = document.querySelector("#tomorrow-tab");
 const next3DaysTab = document.querySelector("#next3days-tab");
 
-let currentCity = "London";
+let currentCity = "Benin City,NG";
 let weatherChartInstance = null;
 
 // OpenWeather icon function
@@ -17,7 +17,7 @@ function getWeatherIcon(iconCode) {
 }
 
 // CURRENT WEATHER
-async function checkWeather(city = "London") {
+async function checkWeather(city = "Benin City,NG") {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     try {
@@ -63,7 +63,7 @@ async function checkWeather(city = "London") {
 }
 
 // FORECAST
-async function getForecast(city = "London", type = "today") {
+async function getForecast(city = "Benin City,NG", type = "today") {
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
     try {
